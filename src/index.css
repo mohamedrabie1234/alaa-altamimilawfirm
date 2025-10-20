@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "LANTX-BoldItalic";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+@font-face {
+    font-family: "arabFont";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+@font-face {
+    font-family: "arabFont2";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+@font-face {
+    font-family: "arabFont3";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+@font-face {
+    font-family: "arabFont4";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+@font-face {
+    font-family: "arabFontNana";
+    src: url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  @layer utilities {
+    .gradient-text {
+      background: linear-gradient(to right, #ffffff, #ffd700); /* White to gold */
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+  
+
+  .icon-filter {
+    filter: brightness(0) saturate(100%) invert(10%) sepia(99%) saturate(541%) hue-rotate(332deg) brightness(93%) contrast(91%);
+  }
+
+
+  .eye-filter {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(60%) saturate(100%) hue-rotate(340deg) brightness(60%) contrast(120%);
+  }
+  body {
+  font-family: "Tajawal", sans-serif;
+}
