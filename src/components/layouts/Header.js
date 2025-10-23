@@ -99,12 +99,7 @@ export const Header = () => {
             >
               +20 01066533070
             </a>
-            <a
-              href="المنصورة-امام مبني محافظة الدقهلية-برج خطاب-الدور الخامس"
-              className="text-gray-600 hover:text-br3 transition-colors duration-300"
-            >
-              المنصورة-امام مبني محافظة الدقهلية-برج خطاب-الدور الخامس
-            </a>
+            
             <a
               href="mailto:Alaa_etamemey@mans.edu.eg"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
@@ -261,6 +256,14 @@ export const Header = () => {
               </NavLink>
             </li>
             {/* Social Media Icons in Mobile Menu */}
+            <a
+  href="المنصورة-امام مبني محافظة الدقهلية-برج خطاب-الدور الخامس"
+  className="block md:hidden text-gray-600 hover:text-br3 transition-colors duration-300 mb-2 text-right mr-4 leading-relaxed"
+>
+  المنصورة-امام مبني محافظة الدقهلية <br />
+  برج خطاب - الدور الخامس
+</a>
+
             <li className="flex items-center space-x-4 pt-4">
               <a
                 href="https://instagram.com"
@@ -286,12 +289,14 @@ export const Header = () => {
               >
                 <FaLinkedin className="text-2xl" />
               </a>
+              
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black hover:text-br3 transition-colors duration-300"
               >
+                
                 <FaXTwitter className="text-2xl" />
               </a>
             </li>

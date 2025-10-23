@@ -156,7 +156,8 @@ const VideoList = () => {
                       preload="metadata"
                       playsInline
                       src={video.secure_url}
-                      className="w-full h-full rounded-lg shadow object-cover"
+                     className="w-full h-full rounded-lg shadow object-contain bg-black"
+
                       onLoadedMetadata={() => handleVideoCanPlay(video.public_id)}
                       onCanPlay={() => handleVideoCanPlay(video.public_id)}
                       onLoadedData={() => handleVideoLoad(video.public_id)}

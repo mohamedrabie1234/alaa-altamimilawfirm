@@ -50,7 +50,7 @@ const Dashboard = () => {
       <header className="fixed mt-20 w-full bg-white shadow-md z-10 ">
         <div className="max-w-5xl mx-auto py-4 px-6">
           <h1 className="text-2xl md:text-3xl font-semibold text-center text-gray-800">
-            مرحبا يا دكتور
+             مرحبا يا دكتور علاء
           </h1>
           <p className="text-gray-600 text-center mt-2">
             إدارة المحتوى الخاص بك بسهولة.
@@ -59,43 +59,33 @@ const Dashboard = () => {
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              className="px-4 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              className="px-4 py-3 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] focus:ring-2 focus:ring-[#c4a484] focus:outline-none transition duration-200"
               onClick={() => setCurrentComponent("video")}
             >
               إضافة فيديو
             </button>
+            
+            
             <button
-              className="px-4 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:ring-2 focus:ring-green-400 focus:outline-none"
+              className="px-4 py-3 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] focus:ring-2 focus:ring-[#c4a484] focus:outline-none transition duration-200"
+              onClick={() => setCurrentComponent("deletevideo")}
+            >
+              حذف فيديو
+            </button>
+           <button
+              className="px-4 py-3 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] focus:ring-2 focus:ring-[#c4a484] focus:outline-none transition duration-200"
               onClick={() => setCurrentComponent("article")}
             >
               إضافة مقال
             </button>
             <button
-              className="px-4 py-3 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 focus:ring-2 focus:ring-purple-400 focus:outline-none"
-              onClick={() => setCurrentComponent("portfolio")}
-            >
-              إضافة "من أنا"
-            </button>
-            <button
-              className="px-4 py-3 bg-rose-500 text-white rounded-lg shadow-md hover:bg-rose-600 focus:ring-2 focus:ring-rose-400 focus:outline-none"
-              onClick={() => setCurrentComponent("deletevideo")}
-            >
-              حذف فيديو
-            </button>
-            <button
-              className="px-4 py-3 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-400 focus:outline-none"
-              onClick={() => setCurrentComponent("editportfolio")}
-            >
-              تعديل "من أنا"
-            </button>
-            <button
-              className="px-4 py-3 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+              className="px-4 py-3 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] focus:ring-2 focus:ring-[#c4a484] focus:outline-none transition duration-200"
               onClick={() => setCurrentComponent("updatearticle")}
             >
               تحديث مقال
             </button>
             <button
-              className="px-4 py-3 bg-lime-500 text-white rounded-lg shadow-md hover:bg-lime-600 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+              className="px-4 py-3 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] focus:ring-2 focus:ring-[#c4a484] focus:outline-none transition duration-200"
               onClick={() => setCurrentComponent("deletearticle")}
             >
               حذف  مقال
@@ -125,7 +115,7 @@ const Dashboard = () => {
           rel="noopener noreferrer"
           className="text-gray-500 hover:underline"
         >
-          Made by Ahmed Shehab
+   
         </a>
         <button
           onClick={handleSignOut}
