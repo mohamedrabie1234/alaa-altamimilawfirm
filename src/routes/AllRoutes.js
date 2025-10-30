@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ArticleDetail } from "../components/Main/ArticleDetail";
 import { UnFound } from "../components/layouts/unFound";
 import { AboutUsPage } from "../pages/AboutUsPage";
+import ChangePassword from "../components/auth/ChangePassword"; // ✅ Import the page
 
 export const AllRoutes = () => {
   const [user, setUser] = useState(null);
@@ -17,21 +18,32 @@ export const AllRoutes = () => {
 
   return (
     <div className="dark:bg-darkbg">
-       {/* Add this component */}
       <Routes>
+        {/* Public routes */}
         <Route path="/" element={<MainPage title="Home" />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/whoweare" element={<AboutUsPage />} />
-        <Route path="*" element={<UnFound />} />
         <Route
           path="/login"
           element={<Login title="Login Page" onLoginSuccess={handleLoginSuccess} />}
         />
+        <Route path="*" element={<UnFound />} />
+
+        {/* Protected routes */}
         <Route
           path="/dashboard"
           element={
             <ProtectedRoute user={user}>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/change-password"
+          element={
+            <ProtectedRoute user={user}>
+              <ChangePassword />
             </ProtectedRoute>
           }
         />

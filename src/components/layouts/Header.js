@@ -57,7 +57,7 @@ export const Header = () => {
           {/* Social Media Icons (Left) */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/alaa_altamimi_law/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
@@ -65,7 +65,7 @@ export const Header = () => {
               <FaInstagram className="text-xl" />
             </a>
             <a
-              href="https://www.facebook.com/alaa.eltamemey?mibextid=wwXIfr&rdid=l7jHCy9KkEHP7WiR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FKRm2ktkh%2F%3Fmibextid%3DwwXIfr#"
+              href="https://www.facebook.com/profile.php?id=61578185773858"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
@@ -81,7 +81,7 @@ export const Header = () => {
               <FaLinkedin className="text-xl" />
             </a>
             <a
-              href="https://twitter.com/Alaaeltamemey"
+              href="https://x.com/alaaaltami23401"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
@@ -97,9 +97,15 @@ export const Header = () => {
               href="tel:+01066533070"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
             >
+             المنصورة-امام مبني محافظة الدقهلية 
+  برج خطاب - الدور الخامس
+            </a>
+            <a
+              href="tel:+01066533070"
+              className="text-gray-600 hover:text-br3 transition-colors duration-300"
+            >
               +20 01066533070
             </a>
-            
             <a
               href="mailto:Alaa_etamemey@mans.edu.eg"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"

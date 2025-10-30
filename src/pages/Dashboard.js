@@ -117,12 +117,25 @@ const Dashboard = () => {
         >
    
         </a>
-        <button
-          onClick={handleSignOut}
-          className="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 focus:ring-2 focus:ring-red-400 focus:outline-none"
-        >
-          تسجيل الخروج
-        </button>
+       <div className="fixed bottom-4 right-4 flex flex-col space-y-3">
+  <div className="fixed bottom-4 right-4 flex flex-col space-y-3">
+  <button
+    onClick={handleSignOut}
+    className="px-4 py-2 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] text-gray-700 text-lg font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+  >
+    تسجيل الخروج
+  </button>
+
+  <button
+    onClick={() => navigate("/change-password")}
+    className="px-4 py-2 bg-[#5b3a29] text-white rounded-lg shadow-md hover:bg-[#704231] text-gray-700 text-lg font-semibold rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+  >
+    كلمه سر جديدة
+  </button>
+</div>
+
+</div>
+
       </footer>
     </div>
   );
