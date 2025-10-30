@@ -94,12 +94,12 @@ export const Header = () => {
           {/* Phone Number and Email (Right) */}
           <div className="flex items-center space-x-4">
             <a
-              href="tel:+01066533070"
-              className="text-gray-600 hover:text-br3 transition-colors duration-300"
-            >
-             المنصورة-امام مبني محافظة الدقهلية 
+  href="tel:+01066533070"
+  className="hidden md:inline text-gray-600 hover:text-br3 transition-colors duration-300"
+>
+  المنصورة - امام مبني محافظة الدقهلية 
   برج خطاب - الدور الخامس
-            </a>
+</a>
             <a
               href="tel:+01066533070"
               className="text-gray-600 hover:text-br3 transition-colors duration-300"
