@@ -189,7 +189,7 @@ const VideoList = () => {
       شاهد المزيد من الفيديوهات التعليمية والمقابلات القانونية على قناتنا في اليوتيوب.
     </p>
     <a
-      href="https://www.youtube.com/@YourChannelName" // <-- put your YouTube channel link here
+      href="https://www.youtube.com/channel/UCYuMZv3s_Clx4JPJjf1IjnQ" // <-- put your YouTube channel link here
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center gap-2 bg-white text-br3 font-medium px-6 py-3 rounded-full shadow-md hover:bg-br3 hover:text-white transition duration-300"
