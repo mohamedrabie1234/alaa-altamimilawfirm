@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/images/logo1.png";
 import name from "../../assets/images/logoName1.png";
+import icon11 from "../../assets/images/icon11.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaSnapchat } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
+
+;
+
 
 
 export const Header = () => {
@@ -48,9 +54,29 @@ export const Header = () => {
   const getLinkStyle = (isActive) => {
     return isActive ? { transform: "translateY(-5px)", color: "black" } : undefined;
   };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header
+  className={`fixed top-0 left-0 w-full z-50 border-b border-gray-200 shadow-sm transition-all duration-500 ${
+    isScrolled ? "bg-white/70 backdrop-blur-md" : "bg-white"
+  }`}
+>
+
       {/* Top Bar (Social Icons and Contact Info) */}
       <div className="w-full bg-gray-100 py-2">
         <div className="mx-auto max-w-[1200px] flex items-center justify-between px-4">
@@ -88,6 +114,22 @@ export const Header = () => {
             >
               <FaXTwitter className="text-xl" />
             </a>
+            <a
+               href="https://www.snapchat.com/add/yourusername"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-gray-600 hover:text-br3 transition-colors duration-300"
+             >
+               <FaSnapchat className="text-xl" />
+             </a>
+             <a
+               href="https://www.youtube.com/channel/UCYuMZv3s_Clx4JPJjf1IjnQ"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="text-gray-600 hover:text-br3 transition-colors duration-300"
+             >
+               <FaYoutube className="text-xl" />
+             </a>
        
           </div>
 
@@ -189,75 +231,111 @@ export const Header = () => {
             الرئيسية
        
           </NavLink>
+          {/* PDF Button */}
+<a
+  href="/cv.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="ml-4 flex items-center"
+>
+  <img
+    src={icon11}
+    alt="PDF"
+    className="w-8 h-8 hover:scale-110 transition-transform"
+  />
+</a>
+
         </nav>
 
         {/* Hamburger Icon (Right on Mobile) */}
-        <div className="md:hidden order-4">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-600 text-2xl focus:outline-none"
-          >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
+        {/* Mobile Right Icons (Hamburger + CV) */}
+<div className="md:hidden order-4 flex items-center space-x-3">
+  {/* PDF Button */}
+  <a
+    href="/cv.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={icon11}
+      alt="CV"
+      className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer"
+    />
+  </a>
+
+  {/* Hamburger Icon */}
+  <button
+    onClick={toggleMenu}
+    className="text-gray-600 text-2xl focus:outline-none"
+  >
+    {isMenuOpen ? <FaTimes /> : <FaBars />}
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <nav className="md:hidden bg-white w-full shadow-lg">
-          <ul className="flex flex-col text-right items-start space-y-4 py-4 pl-8">
-            <li>
-              <NavLink
-                to="/"
-                className={`text-lg transition-colors duration-300 relative ${
-                  isLinkActive("/") ? "text-br3 font-bold" : "text-black hover:text-br3"
-                }`}
-                onClick={toggleMenu}
-              >
-                الرئيسية
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/whoweare"
-                className={`text-lg transition-colors duration-300 relative ${
-                  isLinkActive("/whoweare") ? "text-br3 font-bold" : "text-black hover:text-br3"
-                }`}
-                onClick={toggleMenu}
-              >
-                من نحن
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#whoweare"
-                className={`text-lg transition-colors duration-300 relative ${
-                  isLinkActive("/", "#whoweare") ? "text-br3 font-bold" : "text-black hover:text-br3"
-                }`}
-                onClick={toggleMenu}
-              >
-                خدماتنا
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#why-us"
-                className={`text-lg transition-colors duration-300 ${
-                  isLinkActive("/", "#why-us") ? "text-br3 font-bold" : "text-black hover:text-br3"
-                }`}
-                onClick={toggleMenu}
-              >
-                لماذا نحن
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/#articles"
-                className={`text-lg transition-colors duration-300 relative ${
-                  isLinkActive("/", "#articles") ? "text-br3 font-bold" : "text-black hover:text-br3"
-                }`}
-                onClick={toggleMenu}
-              >
+     {isMenuOpen && (
+  <nav
+    className="md:hidden fixed top-25 left-0 w-full bg-white/70 backdrop-blur-lg shadow-lg transition-all duration-500 z-40"
+  >
+    <ul className="flex flex-col text-right items-start space-y-4 py-4 pl-8">
+      <li>
+        <NavLink
+          to="/"
+          className={`text-lg transition-colors duration-300 relative ${
+            isLinkActive("/") ? "text-br3 font-bold" : "text-black hover:text-br3"
+          }`}
+          onClick={toggleMenu}
+        >
+          الرئيسية
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/whoweare"
+          className={`text-lg transition-colors duration-300 relative ${
+            isLinkActive("/whoweare") ? "text-br3 font-bold" : "text-black hover:text-br3"
+          }`}
+          onClick={toggleMenu}
+        >
+          من نحن
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/#whoweare"
+          className={`text-lg transition-colors duration-300 relative ${
+            isLinkActive("/", "#whoweare") ? "text-br3 font-bold" : "text-black hover:text-br3"
+          }`}
+          onClick={toggleMenu}
+        >
+          خدماتنا
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/#why-us"
+          className={`text-lg transition-colors duration-300 ${
+            isLinkActive("/", "#why-us") ? "text-br3 font-bold" : "text-black hover:text-br3"
+          }`}
+          onClick={toggleMenu}
+        >
+          لماذا نحن
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/#articles"
+          className={`text-lg transition-colors duration-300 relative ${
+            isLinkActive("/", "#articles") ? "text-br3 font-bold" : "text-black hover:text-br3"
+          }`}
+          onClick={toggleMenu}
+        >
                 المقالات
               </NavLink>
             </li>
@@ -297,13 +375,34 @@ export const Header = () => {
               </a>
               
               <a
-                href="https://linkedin.com"
+                href="https://x.com/alaaaltami23401"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black hover:text-br3 transition-colors duration-300"
               >
                 
                 <FaXTwitter className="text-2xl" />
+                
+              </a>
+              <a
+                href="https://x.com/alaaaltami23401"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-br3 transition-colors duration-300"
+              >
+                
+                <FaSnapchat className="text-2xl" />
+                
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCYuMZv3s_Clx4JPJjf1IjnQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-br3 transition-colors duration-300"
+              >
+                
+                <FaYoutube className="text-2xl" />
+                
               </a>
             </li>
           </ul>

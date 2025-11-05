@@ -16,6 +16,7 @@ export const Footer = () => {
           <Link
             to="/login"
             className="text-sm font-medium text-gray-500 hover:underline dark:text-gray-400"
+            target="_blank"
           >
             Login
           </Link>

@@ -181,6 +181,32 @@ const VideoList = () => {
               className="swiper-button-next !text-slate-800 !right-0 sm:!right-[-20px] lg:!right-[-40px] !w-8 !h-8 sm:!w-10 sm:!h-10"
               aria-label="الفيديو التالي"
             ></div>
+            {/* Call to Action Section */}
+<div className="flex justify-center mt-12">
+  <div className="bg-gradient-to-r from-br3 to-br2 text-white py-8 px-6 rounded-2xl shadow-lg text-center max-w-lg">
+    <h2 className="text-2xl font-semibold mb-3">المزيد من الفيديوهات والمحتوى</h2>
+    <p className="mb-6 text-sm opacity-90">
+      شاهد المزيد من الفيديوهات التعليمية والمقابلات القانونية على قناتنا في اليوتيوب.
+    </p>
+    <a
+      href="https://www.youtube.com/@YourChannelName" // <-- put your YouTube channel link here
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-2 bg-white text-br3 font-medium px-6 py-3 rounded-full shadow-md hover:bg-br3 hover:text-white transition duration-300"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-5 h-5 text-red-600"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M23.498 6.186a2.997 2.997 0 00-2.11-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.388.566a2.997 2.997 0 00-2.11 2.12C0 8.067 0 12 0 12s0 3.933.502 5.814a2.997 2.997 0 002.11 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.388-.566a2.997 2.997 0 002.11-2.12C24 15.933 24 12 24 12s0-3.933-.502-5.814zM9.75 15.02v-6.04L15.5 12l-5.75 3.02z"/>
+      </svg>
+      زيارة قناة اليوتيوب
+    </a>
+  </div>
+</div>
+
           </div>
         )}
       </div>
