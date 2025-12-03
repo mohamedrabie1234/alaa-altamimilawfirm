@@ -6,9 +6,9 @@ export const Footer = () => {
       <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2025{" "}
-          <a href="" className="hover:underline">
+          <span className="hover:underline">
             Alaa Al-Tamimi Law
-          </a>
+          </span>
           . All Rights Reserved.
         </span>
 
@@ -21,8 +21,6 @@ export const Footer = () => {
             Login
           </Link>
         </div>
-
-        
       </div>
     </footer>
   );
