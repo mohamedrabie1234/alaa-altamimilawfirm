@@ -72,7 +72,7 @@ const ChangePassword = () => {
     <div className="h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-[500px] w-full p-6 bg-white shadow-md rounded-2xl">
         <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
-          Change Password
+          تغير كلمه السر
         </h2>
 
         <form onSubmit={handleChangePassword}>
