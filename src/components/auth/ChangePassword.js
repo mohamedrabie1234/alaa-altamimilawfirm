@@ -106,7 +106,7 @@ const ChangePassword = () => {
 
           <div className="mb-4">
             <label className="block text-gray-600 mb-1 text-sm font-medium">
-              Confirm New Password
+              Confirm New Password!
             </label>
             <input
               type="password"
